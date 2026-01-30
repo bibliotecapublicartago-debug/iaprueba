@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glen Soto | Inteligencia Artificial Empresarial</title>
+    <style>
+        :root {
+            --primary: #0071e3; /* Azul Tecnológico */
+            --accent: #00f2ff; /* Cyan IA */
+            --bg: #050505;
+            --card-bg: #121212;
+            --text-main: #ffffff;
+            --text-dim: #a1a1a6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Header --- */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo { font-weight: 800; font-size: 1.1rem; color: var(--accent); letter-spacing: 1px; }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 120px 5% 80px;
+            text-align: center;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* --- Botones --- */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-ws {
+            background-color: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-ws:hover { transform: scale(1.05); background-color: #20ba5a; }
+
+        /* --- Servicios --- */
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+
+        .services {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+
+        .card h3 { color: var(--accent); margin-bottom: 20px; font-size: 1.5rem; }
+
+        .card ul { list-style: none; }
+
+        .card li {
+            margin-bottom: 15px;
+            color: var(--text-dim);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .card li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+        /* --- Autoridad (Bio) --- */
+        .bio {
+            padding: 100px 5%;
+            background-color: #0a0a0a;
+        }
+
+        .bio-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .bio-content { flex: 1; min-width: 300px; }
+
+        .badge-container { display: flex; gap: 10px; margin-bottom: 20px; }
+
+        .badge {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+        }
+
+        .bio-content h2 { font-size: 2.2rem; margin-bottom: 20px; }
+
+        .bio-content p { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 20px; }
+
+        /* --- Contacto --- */
+        .contact {
+            padding: 100px 5%;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info { margin: 30px 0; font-size: 1.3rem; font-weight: bold; color: var(--accent); }
+
+        footer {
+            padding: 50px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #444;
+            border-top: 1px solid #111;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .bio-container { text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GLEN SOTO MADRIGAL</div>
+        <div style="font-size: 0.8rem; color: var(--text-dim);">Cartago, CR</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Inteligencia Artificial para el mundo real.</h1>
+        <p>Potenciá tu rentabilidad empresarial o dominá la IA con mentorías personalizadas de alto nivel técnico.</p>
+        <a href="https://wa.me/50686680786" class="btn btn-ws">HABLEMOS POR WHATSAPP</a>
+    </section>
+
+    <section class="services">
+        <div class="card">
+            <h3>Soluciones para PyMES</h3>
+            <ul>
+                <li><strong>Eficiencia Operativa:</strong> Reducción de tareas manuales con agentes de IA.</li>
+                <li><strong>Automatización de Ventas:</strong> Atención al cliente inteligente 24/7.</li>
+                <li><strong>Estrategia de Datos:</strong> No solo tecnología, sino resultados de negocio.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Clases y Mentoría</h3>
+            <ul>
+                <li><strong>Formación 1 a 1:</strong> Aprendé a usar herramientas de IA aplicadas a tu perfil.</li>
+                <li><strong>IA para Estudiantes:</strong> Elevá tu rendimiento académico y profesional.</li>
+                <li><strong>Dominio Técnico:</strong> Sin tecnicismos vacíos, aprendizaje práctico.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bio">
+        <div class="bio-container">
+            <div class="bio-content">
+                <div class="badge-container">
+                    <span class="badge">GRADUADO UCR</span>
+                    <span class="badge">GRADUADO TEC</span>
+                </div>
+                <h2>Rigor Académico, Resultados Prácticos</h2>
+                <p>Soy especialista en IA formado en las dos mejores instituciones tecnológicas de Costa Rica. Entiendo la complejidad de la tecnología, pero mi pasión es simplificarla para vos.</p>
+                <p>Desde Cartago, brindo consultoría que combina la profundidad técnica con una visión pragmática para transformar negocios y carreras profesionales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact-box">
+            <h2>¿Tenés un proyecto en mente?</h2>
+            <p style="color: var(--text-dim);">Escribime hoy mismo y busquemos la mejor solución de IA para tu caso.</p>
+            <div class="contact-info">
+                <p>8668-0786</p>
+                <p style="font-size: 1rem; margin-top: 10px;">glensoto7@gmail.com</p>
+            </div>
+            <a href="https://wa.me/50686680786" class="btn btn-ws">ENVIAR MENSAJE DIRECTO</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Glen Soto Madrigal | Especialista en IA | Cartago, Costa Rica
+    </footer>
+
+</body>
+</html>
